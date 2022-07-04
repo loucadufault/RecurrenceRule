@@ -105,6 +105,8 @@ function convertUserMonthStringToRRuleConstant(month: string): number {
 }
 
 function convertFrequencyStringToRRuleConstant(frequency: string): Frequency {
+  frequency = frequency.trim().toUpperCase();
+
   const frequencyStringToRRuleConstants = {
     YEARLY: RRule.YEARLY,
     MONTHLY: RRule.MONTHLY,
@@ -114,8 +116,8 @@ function convertFrequencyStringToRRuleConstant(frequency: string): Frequency {
     MINUTELY: RRule.MINUTELY,
     SECONDLY: RRule.SECONDLY,
   }
-  if (frequencyStringToRRuleConstants.hasOwnProperty(frequency.toUpperCase())) {
-    return frequencyStringToRRuleConstants[frequency.toUpperCase()]
+  if (frequencyStringToRRuleConstants.hasOwnProperty(frequency)) {
+    return frequencyStringToRRuleConstants[frequency]
   } else {
     throw new CouldNotConvertError;
   }
