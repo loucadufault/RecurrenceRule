@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/loucadufault/RecurrenceRule#readme",
   "dependencies": {
-    "@codahq/packs-sdk": "^1.0.1"
+    "@codahq/packs-sdk": "^1.0.1",
+    "rrule": "^2.7.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.1",
