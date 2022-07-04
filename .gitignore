@@ -1,0 +1,11 @@
+# Node
+/node_modules/
+
+# Coda
+.coda.json
+.coda-credentials.json
+
+# macOS
+.DS_Store
+
+.env
